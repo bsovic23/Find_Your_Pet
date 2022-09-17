@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>FindYourPet</title>
+</head>
+
+
+    <body class="h-screen bg-gray-100" >
+
+    <!--NavBar-->
+    <header class="navBarHeader">
+
+        <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+            <div class="flex items-center flex-shrink-0 text-white mr-6">
+             
+              <span class="font-semibold text-xl tracking-tight">Find Your Pet</span>
+            </div>
+            <div class="block lg:hidden">
+              <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+              </button>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+              <div class="text-sm lg:flex-grow">
+                <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                  Who We Are 
+                </a>
+                <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                 Why Adopt 
+                </a>
+                <a href="#responsive-header" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+                  Contact Us
+                </a>
+              </div>
+              <div>
+                <a href="#" class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Start Searching</a>
+              </div>
+            </div>
+          </nav>
+        <!--Picture navBarPic can float inline to the left of NavBar choices-->
+        </nav>
+    </header>
+
+        <section class="relative bg-white">
+            <img
+              class="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-25 sm:opacity-100"
+              src="https://images.unsplash.com/photo-1601758003122-53c40e686a19"
+              alt="Couple on a bed with a dog"
+            />
+          
+            <div class="hidden sm:block sm:inset-0 sm:absolute sm:bg-gradient-to-r sm:from-white sm:to-transparent"></div>
+          
+            <div class="relative px-4 py-32 mx-auto max-w-screen-xl lg:h-screen lg:items-center lg:flex">
+              <div class="max-w-xl text-center sm:text-left">
+                <h1 class="text-3xl font-extrabold sm:text-5xl">
+                  Let's Find your
+                  <strong class="font-extrabold text-rose-700 sm:block">
+                    Forever Friend
+                  </strong>
+                </h1>
+          
+                <p class="max-w-lg mt-4 sm:leading-relaxed sm:text-xl">
+                  Search adoptable pets from shelters all over the country
+                </p>
+          
+
+              </div>
+            </div>
+          </section>
+          
+
+    <!--Slide One: Homepage and Form-->
+    <section class="slideOneContainer">
+        <!--Picture + form submission here-->
+        <div>
+            <img src="#" alt="" />  
+        </div>
+        <div class="formSection" id="formSection">
+
+<p class="text-xl font-light leading-relaxed mt-6 mb-4 text-gray-800 p-8 text-center">
+Over 4,000,000 animals are adopted every year. Find animals from shelters and rescues all over the country just using your zipcode. You'll also see just how far they are from your home too! Millions of dogs, cats, and hamsters are available at a location near you. Check out the form below. Your future new family member is waiting for you!
+</p>
+
+<p class="text-xl font-bold leading-relaxed mt-6 mb-4 text-gray-800 p-8 text-center">
+Rescue, love, care, and repeat
+</p>
+
+
+                <section class="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
+                    <h2 class="text-lg font-semibold text-gray-700 capitalize dark:text-white"> Enter your zipcode here:
+                    </h2>
+                
+                    <form id="search-form">
+                        <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
+                            <div>
+                                <label class="text-gray-700 dark:text-gray-200" for="zipcode">Zipcode</label>
+                                <input id="username" type="input" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
+                            </div>
+
+                
+
+                        </div>
+                
+                        <div class="flex justify-end mt-6">
+
+                            <button type="submit" class="text-white font-bold bg-purple-700 hover:bg-purple-800 py-2 px-4 rounded">
+                                Submit</button>
+                        </div>
+                    </form>
+                </section>
+
+            
+
+            </form>
+        </div>
+    </section>
+    
+
+    <!-- this form holds all the search results-->
+    <div class="mb-8"></div>
+    <div id="animal-form" class="grid grid-cols-4 gap-4">
+        <div class="col-12 col-md-4 rounded-lg shadow-lg bg-white max-w-sm">
+          <div class="p-6">
+            <img id="img0">
+            <h6 id="name0"></h6>
+            <h6 id="type0"></h6>
+            <h6 id="breed0"></h6>
+            <h6 id="city0"></h6>
+            <h6 id="zip0"></h6>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 rounded-lg shadow-lg bg-white max-w-sm">
+          <div class="p-6">
+            <img id="img1">
+            <h6 id="name1"></h6>
+            <h6 id="type1"></h6>
+            <h6 id="breed1"></h6>
+            <h6 id="city1"></h6>
+            <h6 id="zip1"></h6>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 rounded-lg shadow-lg bg-white max-w-sm">
+          <div class="p-6">
+            <img id="img2">
+            <h6 id="name2"></h6>
+            <h6 id="type2"></h6>
+            <h6 id="breed2"></h6>
+            <h6 id="city2"></h6>
+            <h6 id="zip2"></h6>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 rounded-lg shadow-lg bg-white max-w-sm">
+          <div class="p-6">
+            <img id="img3">
+            <h6 id="name3"></h6>
+            <h6 id="type3"></h6>
+            <h6 id="breed3"></h6>
+            <h6 id="city3"></h6>
+            <h6 id="zip3"></h6>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 rounded-lg shadow-lg bg-white max-w-sm">
+          <div class="p-6">
+            <img id="img4">
+            <h6 id="name4"></h6>
+            <h6 id="type4"></h6>
+            <h6 id="breed4"></h6>
+            <h6 id="city4"></h6>
+            <h6 id="zip4"></h6>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 rounded-lg shadow-lg bg-white max-w-sm">
+          <div class="p-6">
+            <img id="img5">
+            <h6 id="name5"></h6>
+            <h6 id="type5"></h6>
+            <h6 id="breed5"></h6>
+            <h6 id="city5"></h6>
+            <h6 id="zip5"></h6>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 rounded-lg shadow-lg bg-white max-w-sm">
+          <div class="p-6">
+            <img id="img6">
+            <h6 id="name6"></h6>
+            <h6 id="type6"></h6>
+            <h6 id="breed6"></h6>
+            <h6 id="city6"></h6>
+            <h6 id="zip6"></h6>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 rounded-lg shadow-lg bg-white max-w-sm">
+          <div class="p-6">
+            <img id="img7">
+            <h6 id="name7"></h6>
+            <h6 id="type7"></h6>
+            <h6 id="breed7"></h6>
+            <h6 id="city7"></h6>
+            <h6 id="zip7"></h6>
+          </div>
+        </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div class="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300">
+    
+    <footer class="text-center lg:text-left bg-gray-100 text-gray-600">
+        <div class="flex justify-center items-center lg:justify-between p-6 border-b border-gray-300">
+
+
+          </div>
+        </div>
+        <div class="mx-6 py-10 text-center md:text-left">
+          <div class="grid grid-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="">
+              <h6 class="
+                  uppercase
+                  font-semibold
+                  mb-4
+                  flex
+                  items-center
+                  justify-center
+                  md:justify-start
+                ">
+
+                Project Contributors 
+              </h6>
+
+              <p class="mb-4">
+<div class="hover:text-purple-700 ">
+  <a href="https://jmhano.github.io/portfolio/" > 
+    Jen Hano </a>
+</div>  
+</p>
+<p class="mb-4">
+<div class="hover:text-purple-700 ">
+  <a href="https://mkhlink.github.io/Personal_Portfolio/" > Likhon Hassan</a>
+</div>  
+</p>
+
+<p class="mb-4">
+<div class="hover:text-purple-700 ">
+  <a href="https://bsovic23.github.io/Portfolio_New/" > Brit Sovic </a>
+</div>  
+</p>
+
+
+            </div>
+            <div class="">
+              <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+                Available Animals
+              </h6>
+              <p class="mb-4">
+                <a href="https://en.wikipedia.org/wiki/Dog" class="text-gray-600">Dog</a>
+              </p>
+              <p class="mb-4">
+                <a href="https://en.wikipedia.org/wiki/Cat" class="text-gray-600">Cat</a>
+              </p>
+              <p>
+                <a href="https://en.wikipedia.org/wiki/Hamster" class="text-gray-600">Hamster</a>
+              </p>
+            </div>
+            <div class="">
+              <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+                Useful links
+              </h6>
+              <p class="mb-4">
+                <a href="https://aspca.org" class="text-gray-600">ASPCA.org</a>
+              </p>
+              <p class="mb-4">
+                <a href="https://petfinder.com" class="text-gray-600">Petfinder.com</a>
+              </p>
+              <p class="mb-4">
+                <a href="https://dogster.com" class="text-gray-600">Dogster.com</a>
+              </p>
+            </div>
+            <div class="">
+              <h6 class="uppercase font-semibold mb-4 flex justify-center md:justify-start">
+                Contact
+              </h6>
+              <p class="flex items-center justify-center md:justify-start mb-4">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="home"
+                  class="w-4 mr-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path fill="currentColor"
+                    d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z">
+                  </path>
+                </svg>
+                New York, NY 10025, US
+              </p>
+              <p class="flex items-center justify-center md:justify-start mb-4">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope"
+                  class="w-4 mr-4" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512">
+                  <path fill="currentColor"
+                    d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z">
+                  </path>
+                </svg>
+                info@example.com
+              </p>
+              <p class="flex items-center justify-center md:justify-start mb-4">
+                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone"
+                  class="w-4 mr-4" role="img" xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512">
+                  <path fill="currentColor"
+                    d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z">
+                  </path>
+                </svg>
+                + 212 123 4567 
+              </p>
+
+            </div>
+          </div>
+        </div>
+        <div class="text-center p-6 bg-gray-200">
+          <span>© 2022 Copyright:</span>
+          <a class="text-gray-600 font-semibold" href="https://abcdef.com">Bootcampers</a>
+        </div>
+      
+    </footer> 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src = "./assets/js/script.js"></script>
+</body>
+</html>
